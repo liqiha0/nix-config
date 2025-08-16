@@ -1,0 +1,12 @@
+{ config, pkgs, ... }:
+
+{
+  nix = {
+    settings = {
+      experimental-features = [ "nix-command" "flakes" ];
+    };
+    optimise.automatic = true;
+  };
+
+  nixpkgs.config.allowUnfree = true;
+}
